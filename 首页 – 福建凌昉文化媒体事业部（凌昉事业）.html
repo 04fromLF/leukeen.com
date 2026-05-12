@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-hans" xml:lang="zh-hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="sourcecode" href="https://git.qiuwen.net.cn/qiuwen/gongbiquanshu.cn">
+    <link rel="license" href="https://wiki.leukeen.com/QW:QWL">
+    <link rel="apple-touch-icon" href="https://assets.zhongwen.wiki/site/gongbiquanshu/touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="http://127.0.0.1:5500/favicon.ico">
+    <title>凌昉文化 - LEUKEEN</title>
+    <meta name="keyword" content="凌昉文化,晽方官网,晽方Culture,晽方文化,尽规流光,04宇宙,晽方手册,leukeen,linefern,媒体,凌昉,晽方">
+    <meta name="description" content="凌昉事业部（leukeen）是于2019年9月成立的新媒体工作室，是包括“晽方Culture”在内一系列新媒体项目的运营者。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            color-scheme: light dark;
+            width: 100%;
+            background: #fff;
+            color: #555;
+            font-family: "-apple-system","BlinkMacSystemFont","Helvetica Neue","Source Sans Pro","Source Sans 3","DejaVu Sans","Liberation Sans","Helvetica","Roboto","Inter","Arial","SFProDisplay-Regular","PingFang SC","Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei","WenQuanYi Micro Hei","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",emoji,sans-serif;
+            line-height: 1.75;
+            --social-icon-size: 24px;/* 社媒 */
+        }
+        strong, h1, h2 {
+            color: #333;
+        }
+        body,
+        html {
+            min-height: 100vh;
+        }
+        body {
+            display: flex;
+            margin: 0 auto;
+            max-width: 83vw;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header {
+            margin: 5vh 0 0;
+            padding-bottom: 1em;
+            border-bottom: 5px solid #181;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        header a {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #000;
+        }
+        header a:hover {
+            text-decoration: none;
+        }
+        a img {
+            border: 0;
+            vertical-align: text-bottom;
+        }
+        .mw-logo-icon {
+            object-fit: contain;
+        }
+        main {
+            display: flex;
+            margin: 1em auto;
+            min-width: 70vw;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 1em;
+        }
+        h1,
+        h2 {
+            line-height: 1.5;
+        }
+        h1 {
+            font-size: 1.625em;
+            text-align: center;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            font-weight: normal;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        ol,
+        ul {
+            padding-left: 1.35em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        li > ol,
+        li > ul {
+            margin-top: 0;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+        a {
+            color: #36c;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .page-info__text {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        footer {
+            border-top: 1px solid #eaecf0;
+            color: #777;
+            font-size: 0.9em;
+            font-style: normal;
+            margin: 2.5vh 0 10vh;
+            padding-top: 1em;
+        }
+        .footer-links a {
+            margin-right: 0.5em;
+            white-space: nowrap;
+        }
+        @media screen and (prefers-color-scheme: dark) {
+            html {
+                box-shadow: none;
+                filter: invert(1) hue-rotate(180deg);
+            }
+            canvas,
+            img,
+            svg {
+                filter: invert(0) hue-rotate(0deg);
+            }
+        }
+
+
+        /* 社媒 */
+        .social-media {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .social-media a {
+            color: #4a5568;
+            font-size: var(--social-icon-size);
+            transition: color 0.2s ease, transform 0.1s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-media a > i {
+            content: '';
+            background-color: currentcolor;
+            background-image: linear-gradient(transparent, transparent);
+            display: inline-block;
+            width: var(--social-icon-size);
+            height: var(--social-icon-size);
+            vertical-align: middle;
+        }
+
+        .community-links {
+            gap: 20px;
+            display: flex;
+        }
+
+        .social-media a:hover {
+            color: #00B296;
+            transform: translateY(-2px);
+        }
+        .community-links a:hover {
+            color: #36c;
+            transform: translateY(-2px);
+        }
+        i.fa-brands.fa-bilibili-topic {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgODggODgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDg4IDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6IzYxODhGRjtlbmFibGUtYmFja2dyb3VuZDpuZXcgICAgO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTY2LjMsNS42YzAuMSwwLjYsMC4xLDEsMC4xLDEuNWMtMC4xLDAuNC0wLjIsMC44LTAuNCwxLjFjLTAuMSwwLjItMC4yLDAuMy0wLjMsMC41bC0wLjQsMC41bC0wLjcsMC45CgljLTEsMS4yLTIsMi41LTMsMy43bC0wLjcsMC44YzEuMywwLjEsMi42LDAuMSw0LDAuMmMxLjQsMC4xLDIuOSwwLjIsNC4zLDAuM2wyLjEsMC4ybDEuMSwwLjFsMC41LDBsMC4zLDBjMC4xLDAsMC4yLDAsMC4zLDAKCWMxLjYsMC4xLDMuMiwwLjYsNC43LDEuM2MxLjUsMC43LDIuOSwxLjYsNCwyLjdjMS4yLDEuMSwyLjIsMi40LDMsMy45YzAuOCwxLjUsMS4zLDMsMS42LDQuN2MwLDAuMiwwLjEsMC40LDAuMSwwLjYKCWMwLDAuMSwwLDAuMiwwLDAuM2wwLDAuM2wwLjEsMS4xbDAuMiwyLjJjMC4xLDEuNCwwLjIsMi45LDAuMyw0LjNjMC40LDUuOCwwLjYsMTEuNiwwLjUsMTcuNGMtMC4xLDUuOC0wLjUsMTEuNi0xLjEsMTcuMwoJYzAsMC4yLDAsMC40LTAuMSwwLjZjMCwwLjItMC4xLDAuNC0wLjEsMC42bC0wLjEsMC4zbC0wLjEsMC4zYzAsMC4yLTAuMSwwLjQtMC4xLDAuNmMtMC4yLDAuOC0wLjUsMS42LTAuOCwyLjMKCWMtMC43LDEuNS0xLjYsMi45LTIuNyw0LjFjLTEuMSwxLjItMi40LDIuMi0zLjksM2MtMS40LDAuOC0zLDEuMy00LjYsMS42Yy0wLjIsMC0wLjQsMC4xLTAuNiwwLjFsLTAuNiwwLjFsLTEuMSwwLjFMNzAsODUuNAoJYy0xLjQsMC4xLTIuOSwwLjItNC4zLDAuM2MtMi45LDAuMi01LjcsMC4zLTguNiwwLjRjLTExLjQsMC40LTIyLjgsMC4zLTM0LjItMC40Yy0xLjQtMC4xLTIuOS0wLjItNC4zLTAuM2wtMi4xLTAuMmwtMS4xLTAuMQoJbC0wLjUsMGwtMC4zLDBjLTAuMSwwLTAuMiwwLTAuMywwYy0xLjYtMC4yLTMuMi0wLjYtNC43LTEuM2MtMS41LTAuNy0yLjktMS42LTQuMS0yLjdjLTEuMi0xLjEtMi4yLTIuNS0zLTMuOQoJYy0wLjgtMS41LTEuMy0zLTEuNi00LjdDMS4xLDcyLjIsMSw3MiwxLDcxLjhsMC0wLjNsMC0wLjJsMC0wLjFsLTAuMS0xLjFMMC43LDY4Yy0wLjEtMS40LTAuMi0yLjktMC4zLTQuMwoJQzAuMSw1Ny45LTAuMSw1Mi4xLDAsNDYuM2MwLjEtNS44LDAuNS0xMS42LDEtMTcuM2MwLjItMS42LDAuNi0zLjIsMS4yLTQuN2MwLjctMS41LDEuNi0yLjksMi43LTQuMWMxLjEtMS4yLDIuNC0yLjIsMy44LTMKCWMxLjQtMC44LDMtMS4zLDQuNi0xLjZjMC4yLDAsMC40LTAuMSwwLjYtMC4xbDAuNi0wLjFsMS4xLTAuMWwyLjEtMC4yYzEuNC0wLjEsMi45LTAuMiw0LjMtMC4zYzEuMi0wLjEsMi4zLTAuMSwzLjUtMC4yCgljLTAuMy0wLjMtMC41LTAuNi0wLjgtMC45Yy0xLTEuMi0yLTIuNC0zLTMuN2wtMC43LTAuOWwtMC40LTAuNWMtMC4xLTAuMi0wLjItMC4zLTAuMy0wLjVjLTAuMi0wLjMtMC40LTAuNy0wLjQtMS4xCgljLTAuMS0wLjQtMC4xLTAuOSwwLjEtMS41YzAuNi0yLjUsMy4xLTQuMiw1LjgtNGMwLjYsMCwxLjEsMC4yLDEuNSwwLjRjMC40LDAuMiwwLjcsMC40LDEsMC43YzAuMSwwLjEsMC4zLDAuMywwLjQsMC40bDAuNCwwLjUKCWwwLjcsMC45YzEsMS4yLDEuOSwyLjUsMi44LDMuOGMwLjksMS4zLDEuOCwyLjYsMi43LDMuOWMwLjQsMC43LDAuOCwxLjMsMS4yLDJjMy43LTAuMSw3LjQtMC4xLDExLjEtMC4xbDIsMGMwLjQtMC43LDAuOC0xLjMsMS4yLTIKCWMwLjktMS4zLDEuNy0yLjYsMi43LTMuOWMwLjktMS4zLDEuOS0yLjUsMi44LTMuOGwwLjctMC45bDAuNC0wLjVDNTcuNywzLjEsNTcuOCwzLDU4LDIuOGMwLjMtMC4zLDAuNi0wLjUsMS0wLjcKCWMwLjQtMC4yLDAuOS0wLjQsMS41LTAuNEM2My4yLDEuNSw2NS43LDMuMiw2Ni4zLDUuNnogTTU3LDIzLjhjLTIuMS0wLjQtNC4xLDEtNC40LDMuMWwtMS43LDkuNkg0MC44bDEuNC04LjMKCWMwLjQtMi4xLTEtNC4xLTMuMS00LjVjMCwwLDAsMCwwLDBjLTIuMS0wLjQtNC4xLDEtNC40LDMuMUwzMywzNi41aC05LjdjLTIuMywwLTQuMiwxLjktNC4yLDQuMmMwLDIuMywxLjksNC4yLDQuMiw0LjJsOC4zLDAKCWwtMS43LDEwbC05LDBjLTIuMywwLTQuMiwxLjktNC4yLDQuMnMxLjksNC4yLDQuMiw0LjJsNy42LDBMMjcsNzAuN2MtMC40LDIuMSwxLDQuMSwzLjEsNC41YzAsMCwwLDAsMCwwYzIuMSwwLjQsNC4xLTEsNC40LTMuMQoJbDEuNS04LjloMTAuMUw0NSw3MC43Yy0wLjQsMi4xLDEsNC4xLDMuMSw0LjVjMCwwLDAsMCwwLDBjMi4xLDAuNCw0LjEtMSw0LjQtMy4xbDEuNS04LjlsOS44LDBjMi4zLDAsNC4yLTEuOSw0LjItNC4yCglzLTEuOS00LjItNC4yLTQuMmwtOC40LDBsMS43LTEwbDkuMiwwYzIuMywwLDQuMi0xLjksNC4yLTQuMmMwLTIuMy0xLjktNC4yLTQuMi00LjJoLTcuN2wxLjQtOC4zQzYwLjUsMjYuMiw1OS4xLDI0LjIsNTcsMjMuOAoJQzU3LDIzLjgsNTcsMjMuOCw1NywyMy44eiBNNDkuNSw0NC44bC0xLjcsMTBIMzcuNmwxLjctMTBINDkuNXoiLz4KPC9zdmc+Cg==);
+            --social-icon-size: 19px;
+        }
+        i.fa-brands.fa-lofter {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI1LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTIgMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyIDEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLDZjMCwzLjMtMi43LDYtNiw2UzAsOS4zLDAsNnMyLjctNiw2LTZTMTIsMi43LDEyLDYgTTQuNSwyLjJjLTAuMSwwLTAuMiwwLjEtMC4yLDAuMmgwdjQKCWMwLDAuNCwwLDAuNiwwLjEsMC44YzAuMSwwLjIsMC4zLDAuNCwwLjQsMC41YzAuMSwwLjEsMC4yLDAuMSwwLjQsMC4xYzAuMSwwLDAuMiwwLDAuMywwaDEuN2MwLjUsMCwwLjgsMC4xLDEuMSwwLjIKCWMwLjIsMC4xLDAuMywwLjIsMC40LDAuM0M4LjksOC40LDksOC42LDksOC43YzAuMSwwLjIsMC4xLDAuMiwwLjIsMC40YzAsMCwwLDAsMCwwLjFjMCwwLDAsMCwwLDAuMWMwLjEsMC40LTAuMywwLjktMC45LDAuOUg3LjIKCWMtMC4yLDAtMC40LDAtMC42LDBDNi40LDEwLDYuMywxMCw2LjEsOS45QzUuOSw5LjgsNS44LDkuNyw1LjcsOS42QzUuNiw5LjQsNS40LDkuMyw1LjQsOS4yQzUuMyw5LjEsNS40LDksNS41LDlzMC40LTAuMSwwLjYsMC4xCgljMCwwLDAuMSwwLDAuMSwwLjFjMCwwLDAuMSwwLjEsMC4yLDAuMWMwLjEsMC4xLDAuMiwwLjEsMC4zLDAuMWMwLjEsMCwwLjIsMCwwLjQsMGgxLjFjMC4xLDAsMC4yLTAuMSwwLjItMC4yYzAsMCwwLDAsMC0wLjEKCWMwLDAsMCwwLDAsMGMwLDAsMCwwLDAsMGMwLDAsMCwwLDAsMGMwLDAsMCwwLDAsMGMwLTAuMS0wLjEtMC4xLTAuMS0wLjJDOC4yLDguNyw4LjEsOC43LDgsOC42QzcuOCw4LjUsNy42LDguNSw3LjIsOC41SDUuNgoJYy0wLjIsMC0wLjMsMC0wLjQsMGMtMC4zLDAtMC41LTAuMS0wLjctMC4yQzQuMiw4LjEsMy45LDcuOSwzLjgsNy42QzMuNiw3LjMsMy42LDcsMy42LDYuNVYyLjNjMC0wLjQsMC4zLTAuOCwwLjctMC44CgljMC4zLDAsMC41LDAsMC43LDAuMWMwLjEsMC4xLDAuMiwwLjIsMC4zLDAuMkM1LjQsMiw1LjUsMi4yLDUuNiwyLjNDNS44LDIuNiw1LjksMyw1LjksMy40djMuNWMwLDAuMS0wLjEsMC4yLTAuMiwwLjEKCUM1LjQsNyw1LjIsNi43LDUuMiw2LjR2LTNjMC0wLjQsMC0wLjYtMC4yLTAuOEM1LDIuNiw0LjksMi41LDQuOCwyLjRDNC44LDIuMyw0LjcsMi4zLDQuNiwyLjNDNC42LDIuMiw0LjYsMi4yLDQuNSwyLjJMNC41LDIuMgoJQzQuNSwyLjIsNC41LDIuMiw0LjUsMi4yQzQuNSwyLjIsNC41LDIuMiw0LjUsMi4yIi8+Cjwvc3ZnPgo=);
+            --social-icon-size: 19px;
+        }
+        i.fa-brands.fa-bilibili {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIHY3LjIuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIENvcHlyaWdodCAyMDI2IEZvbnRpY29ucywgSW5jLi0tPjxwYXRoIGQ9Ik01NTIuNiAxNjguMUM1NjkuMyAxODYuMiA1NzcgMjA3LjggNTc1LjkgMjMzLjhMNTc1LjkgNDM2LjJDNTc1LjUgNDYyLjYgNTY2LjcgNDg0LjMgNTQ5LjQgNTAxLjNDNTMyLjIgNTE4LjMgNTEwLjMgNTI3LjIgNDgzLjkgNTI4TDE1NiA1MjhDMTI5LjYgNTI3LjIgMTA3LjggNTE4LjIgOTAuNyA1MDAuOEM3My42IDQ4My40IDY0LjcgNDYwLjUgNjQgNDMyLjJMNjQgMjMzLjhDNjQuOCAyMDcuOCA3My43IDE4Ni4yIDkwLjcgMTY4LjFDMTA3LjggMTUxLjggMTI5LjUgMTQyLjggMTU2IDE0MkwxODUuNCAxNDJMMTYwIDExNi4yQzE1NC4zIDExMC41IDE1MS40IDEwMy4yIDE1MS40IDk0LjRDMTUxLjQgODUuNiAxNTQuMyA3OC4zIDE2MCA3Mi42QzE2NS43IDY2LjkgMTczIDY0IDE4MS45IDY0QzE5MC44IDY0IDE5OCA2Ni45IDIwMy44IDcyLjZMMjc3LjEgMTQyTDM2NS4xIDE0Mkw0MzkuNiA3Mi42QzQ0NS43IDY2LjkgNDUzLjIgNjQgNDYyIDY0QzQ3MC44IDY0IDQ3OC4xIDY2LjkgNDgzLjkgNzIuNkM0ODkuNiA3OC4zIDQ5Mi41IDg1LjYgNDkyLjUgOTQuNEM0OTIuNSAxMDMuMiA0ODkuNiAxMTAuNSA0ODMuOSAxMTYuMkw0NTguNiAxNDJMNDg3LjkgMTQyQzUxNC4zIDE0Mi44IDUzNS45IDE1MS44IDU1Mi42IDE2OC4xek01MTMuOCAyMzcuOEM1MTMuNCAyMjguMiA1MTAuMSAyMjAuNCA1MDMuMSAyMTQuM0M0OTcuOSAyMDguMiA0ODkuMSAyMDQuOSA0ODAuNCAyMDQuNUwxNjAgMjA0LjVDMTUwLjQgMjA0LjkgMTQyLjYgMjA4LjIgMTM2LjQgMjE0LjNDMTMwLjMgMjIwLjQgMTI3IDIyOC4yIDEyNi42IDIzNy44TDEyNi42IDQzMi4yQzEyNi42IDQ0MS40IDEyOS45IDQ0OS4yIDEzNi40IDQ1NS43QzE0Mi45IDQ2Mi4yIDE1MC44IDQ2NS41IDE2MCA0NjUuNUw0ODAuNCA0NjUuNUM0ODkuNiA0NjUuNSA0OTcuNCA0NjIuMiA1MDMuNyA0NTUuN0M1MTAgNDQ5LjIgNTEzLjQgNDQxLjQgNTEzLjggNDMyLjJMNTEzLjggMjM3Ljh6TTI0OS41IDI4MC41QzI1NS44IDI4Ni44IDI1OS4yIDI5NC42IDI1OS42IDMwMy43TDI1OS42IDMzN0MyNTkuMiAzNDYuMiAyNTUuOSAzNTMuOSAyNDkuOCAzNjAuMkMyNDMuNiAzNjYuNSAyMzUuOCAzNjkuNyAyMjYuMiAzNjkuN0MyMTYuNiAzNjkuNyAyMDguNyAzNjYuNSAyMDIuNiAzNjAuMkMxOTYuNSAzNTMuOSAxOTMuMiAzNDYuMiAxOTIuOCAzMzdMMTkyLjggMzAzLjdDMTkzLjIgMjk0LjYgMTk2LjYgMjg2LjggMjAyLjkgMjgwLjVDMjA5LjIgMjc0LjIgMjE2LjEgMjcwLjkgMjI2LjIgMjcwLjVDMjM1LjQgMjcwLjkgMjQzLjIgMjc0LjIgMjQ5LjUgMjgwLjV6TTQ0MSAyODAuNUM0NDcuMyAyODYuOCA0NTAuNyAyOTQuNiA0NTEuMSAzMDMuN0w0NTEuMSAzMzdDNDUwLjcgMzQ2LjIgNDQ3LjQgMzUzLjkgNDQxLjMgMzYwLjJDNDM1LjIgMzY2LjUgNDI3LjMgMzY5LjcgNDE3LjcgMzY5LjdDNDA4LjEgMzY5LjcgNDAwLjMgMzY2LjUgMzk0LjEgMzYwLjJDMzg3LjEgMzUzLjkgMzg0LjcgMzQ2LjIgMzg0LjQgMzM3TDM4NC40IDMwMy43QzM4NC43IDI5NC42IDM4OC4xIDI4Ni44IDM5NC40IDI4MC41QzQwMC43IDI3NC4yIDQwOC41IDI3MC45IDQxNy43IDI3MC41QzQyNi45IDI3MC45IDQzNC43IDI3NC4yIDQ0MSAyODAuNXoiLz48L3N2Zz4=);
+        }
+        i.fab.fa-youtube {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIHY3LjIuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIENvcHlyaWdodCAyMDI2IEZvbnRpY29ucywgSW5jLi0tPjxwYXRoIGQ9Ik01ODEuNyAxODguMUM1NzUuNSAxNjQuNCA1NTYuOSAxNDUuOCA1MzMuNCAxMzkuNUM0OTAuOSAxMjggMzIwLjEgMTI4IDMyMC4xIDEyOEMzMjAuMSAxMjggMTQ5LjMgMTI4IDEwNi43IDEzOS41QzgzLjIgMTQ1LjggNjQuNyAxNjQuNCA1OC40IDE4OC4xQzQ3IDIzMSA0NyAzMjAuNCA0NyAzMjAuNEM0NyAzMjAuNCA0NyA0MDkuOCA1OC40IDQ1Mi43QzY0LjcgNDc2LjMgODMuMiA0OTQuMiAxMDYuNyA1MDAuNUMxNDkuMyA1MTIgMzIwLjEgNTEyIDMyMC4xIDUxMkMzMjAuMSA1MTIgNDkwLjkgNTEyIDUzMy41IDUwMC41QzU1NyA0OTQuMiA1NzUuNSA0NzYuMyA1ODEuOCA0NTIuN0M1OTMuMiA0MDkuOCA1OTMuMiAzMjAuNCA1OTMuMiAzMjAuNEM1OTMuMiAzMjAuNCA1OTMuMiAyMzEgNTgxLjggMTg4LjF6TTI2NC4yIDQwMS42TDI2NC4yIDIzOS4yTDQwNi45IDMyMC40TDI2NC4yIDQwMS42eiIvPjwvc3ZnPg==);
+        }
+        i.fab.fa-tiktok {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNjQwIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIHY3LjIuMCBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIENvcHlyaWdodCAyMDI2IEZvbnRpY29ucywgSW5jLi0tPjxwYXRoIGQ9Ik01NDQuNSAyNzMuOUM1MDAuNSAyNzQgNDU3LjUgMjYwLjMgNDIxLjcgMjM0LjdMNDIxLjcgNDEzLjRDNDIxLjcgNDQ2LjUgNDExLjYgNDc4LjggMzkyLjcgNTA2QzM3My44IDUzMy4yIDM0Ny4xIDU1NCAzMTYuMSA1NjUuNkMyODUuMSA1NzcuMiAyNTEuMyA1NzkuMSAyMTkuMiA1NzAuOUMxODcuMSA1NjIuNyAxNTguMyA1NDUgMTM2LjUgNTIwLjFDMTE0LjcgNDk1LjIgMTAxLjIgNDY0LjEgOTcuNSA0MzEuMkM5My44IDM5OC4zIDEwMC40IDM2NS4xIDExNi4xIDMzNkMxMzEuOCAzMDYuOSAxNTYuMSAyODMuMyAxODUuNyAyNjguM0MyMTUuMyAyNTMuMyAyNDguNiAyNDcuOCAyODEuNCAyNTIuM0wyODEuNCAzNDIuMkMyNjYuNCAzMzcuNSAyNTAuMyAzMzcuNiAyMzUuNCAzNDIuNkMyMjAuNSAzNDcuNiAyMDcuNSAzNTcuMiAxOTguNCAzNjkuOUMxODkuMyAzODIuNiAxODQuNCAzOTggMTg0LjUgNDEzLjhDMTg0LjYgNDI5LjYgMTg5LjcgNDQ0LjggMTk5IDQ1Ny41QzIwOC4zIDQ3MC4yIDIyMS40IDQ3OS42IDIzNi40IDQ4NC40QzI1MS40IDQ4OS4yIDI2Ny41IDQ4OS4yIDI4Mi40IDQ4NC4zQzI5Ny4zIDQ3OS40IDMxMC40IDQ2OS45IDMxOS42IDQ1Ny4yQzMyOC44IDQ0NC41IDMzMy44IDQyOS4xIDMzMy44IDQxMy40TDMzMy44IDY0TDQyMS44IDY0QzQyMS43IDcxLjQgNDIyLjQgNzguOSA0MjMuNyA4Ni4yQzQyNi44IDEwMi41IDQzMy4xIDExOC4xIDQ0Mi40IDEzMS45QzQ1MS43IDE0NS43IDQ2My43IDE1Ny41IDQ3Ny42IDE2Ni41QzQ5Ny41IDE3OS42IDUyMC44IDE4Ni42IDU0NC42IDE4Ni42TDU0NC42IDI3NHoiLz48L3N2Zz4=);
+        }
+        i.fab.fa-xiaohongshu {
+            mask-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0i5Zu+5bGCXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTAwIDUwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTAwIDUwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CS5zdDB7ZmlsbDojRkYyNzQyO30JLnN0MXtmaWxsOiNGRTE2M0Q7fQkuc3Qye2ZpbGw6IzIzMTgxNTt9PC9zdHlsZT48Zz4JPHBhdGggZD0iTTQxMS4yLDQwMi4xYzI0LjUsMCw0OC44LDAuNiw3My4xLTAuM2MxMS44LTAuNCwxNC45LDMuOSwxNC42LDE0LjljLTAuNywxOS42LTAuMywzOS4zLTAuMSw1OWMwLjEsNy42LTIuNCwxMS4yLTEwLjgsMTEuMiAgYy05OC4zLTAuMi0xOTYuNi0wLjItMjk0LjktMC4zYy0xLjQsMC0yLjctMC43LTYuNC0xLjdjOC41LTE3LDE4LjktMzIuOCwyNC42LTUwLjFjOS4yLTI3LjcsMjYuMS0zNy42LDU0LjYtMzMuNCAgYzE1LjksMi40LDMyLjQsMC40LDQ5LjcsMC40YzAtODkuNSwwLTE3OCwwLTI2OC40Yy0xNywwLTM0LjQsMC01My44LDBjMC0yOC4xLTAuMy01NC4zLDAuNC04MC40YzAuMS0yLjUsNi4zLTYuOCw5LjctNi44ICBjNjAuNC0wLjQsMTIwLjgtMC41LDE4MS4yLDAuMWMzLjQsMCw5LjYsNi40LDkuNywxMGMwLjksMjIsMC45LDQ0LjEsMCw2Ni4xYy0wLjEsMy40LTYuMyw5LTEwLjIsOS40Yy0xMC45LDEuMy0yMiwwLjctMzMsMC40ICBjLTcuMS0wLjItMTAuNSwyLjItMTAuNSw5LjhjMC4yLDg0LjQsMC4yLDE2OC44LDAuMywyNTMuMkM0MDkuNCwzOTcuMiw0MTAuMywzOTksNDExLjIsNDAyLjF6Ij48L3BhdGg+CTxwYXRoIGQ9Ik0yMDEuMywxMi42Yy0yMC42LDQxLjgtMzkuOCw4MC43LTYwLjYsMTIyLjhjMzctMS44LDY5LjctMy40LDEwNS01LjFjLTMsNi41LTQuOSwxMS4xLTcuMSwxNS42ICBjLTE5LjcsMzkuOS0zOS41LDc5LjctNTkuMiwxMTkuN2MtMTIuNSwyNS40LTExLjYsMjYuNywxNiwyNy45YzguNCwwLjQsMTYuOCwxLjYsMjcuOSwyLjdjLTEyLjMsMjMuNC0yMi45LDQ0LjctMzQuOCw2NS4zICBjLTIuMywzLjktOS41LDYuOS0xNC41LDYuOWMtMjcuMy0wLjEtNTQuNi0wLjItODEuOC0yLjJjLTI4LjctMi4xLTM3LjYtMTcuNS0yNi4yLTQ0LjJjMTIuMy0yOS4xLDI1LjctNTcuNywzOC42LTg2LjUgIGMxLjktNC4yLDMuNS04LjUsNi40LTE1LjZjLTExLjcsMC0yMS4xLDAuNC0zMC40LTAuMWMtOS41LTAuNS0xOS4zLTAuNi0yOC40LTMuMWMtMTcuMy00LjctMjQuMS0xNi45LTE5LjQtMzQuMSAgYzIuNi05LjYsNi43LTE4LjksMTEtMjhjMjEuMi00My45LDQyLjYtODcuOCw2NC4zLTEzMS41YzIuMS00LjIsNi43LTEwLDEwLjMtMTAuMUMxNDUuMiwxMi4yLDE3MS45LDEyLjYsMjAxLjMsMTIuNnoiPjwvcGF0aD4JPHBhdGggZD0iTTE4NywzOTljLTE0LjQsMjctMjgsNTMuNi00Mi44LDc5LjZjLTIuMyw0LjEtOS42LDcuNS0xNC43LDcuNWMtNDEuMiwwLjYtODIuNCwwLjMtMTI2LjMsMC4zYzMuOC04LjMsNi42LTE1LjEsOS44LTIxLjYgIGM5LjktMTkuNywxOS42LTM5LjUsMzAuMi01OC44YzIuMy00LjIsOC4xLTkuMSwxMi4zLTkuMWM0MS43LTAuNiw4My40LTAuMywxMjUuMi0wLjJDMTgxLjksMzk2LjcsMTgzLjEsMzk3LjYsMTg3LDM5OXoiPjwvcGF0aD48L2c+PC9zdmc+);
+            --social-icon-size: 19px;
+        }
+        @media screen and (max-width: 570px) {
+            header {
+                justify-content: center;
+            }
+            .social-media {
+                margin-top: 0;
+            }
+        }
+
+        /* 折叠无序表格 */
+        .fold-item {
+            position: relative;
+            list-style: none; /* 去掉原有的圆点 */
+        }
+
+        /* 前面显示 + 号 */
+        .fold-item::before {
+            content: "+";
+            position: absolute;
+            left: -1em;
+            font-weight: bold;
+        }
+
+        /* 悬浮变成 - 号 */
+        .fold-item:hover::before {
+            content: "−";
+        }
+
+        /* 子内容默认隐藏 */
+        .fold-item .sub-list {
+            max-height: 0;
+            opacity: 1;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-left: 1.2em;
+            margin: 0;
+        }
+
+        /* 悬浮展开 */
+        .fold-item:hover .sub-list {
+            max-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://www.leukeen.com/" title="福建凌昉文化媒体事业部">
+            <img class="mw-logo-icon" src="./首页 – 福建凌昉文化媒体事业部（凌昉事业）_files/gongbiquanshu-with-favicon.png" width="153" height="50" alt="福建凌昉文化媒体事业部">
+        </a>
+        <div class="social-media">
+            <div class="community-links">
+                <a href="https://m.bilibili.com/topic-detail?topic_id=1068100&amp;bsource=topic.share" target="_blank" aria-label="bilibili-topic">
+                <i class="fa-brands fa-bilibili-topic"></i>
+                </a>
+                <a href="https://www.lofter.com/tag/%E6%99%BD%E6%96%B9culture" target="_blank" aria-label="lofter">
+                <i class="fa-brands fa-lofter"></i>
+                </a>
+            </div> | 
+            <a href="https://space.bilibili.com/476217074" target="_blank" aria-label="bilibili">
+                <i class="fa-brands fa-bilibili"></i>
+            </a>
+            <a href="https://www.youtube.com/@linefern" target="_blank" aria-label="youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://v.douyin.com/_Qiu_qcrm3c" target="_blank" aria-label="douyin">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.xiaohongshu.com/user/profile/6789af73000000000a03e9d2" target="_blank" aria-label="XiaoHongShu">
+                <i class="fab fa-xiaohongshu"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <h1 id="welcome">欢迎访问凌昉媒体</h1>
+        <p>
+            ㅤㅤ<strong>福建凌昉文化媒体事业部</strong>（简称“<strong>凌昉</strong>”；英文：<strong>leukeen</strong>）是**辰***公司于2019年9月成立的新媒体工作室，工作地点位于<a href="https://www.gov.cn/guoqing/">中国</a><a href="https://www.fujian.gov.cn/zjfj/">福建省</a><a href="https://www.longyan.gov.cn/sqk/">龙岩市</a>，是包括“<a href="https://wiki.leukeen.cn/%E6%99%BD%E6%96%B9Culture">晽方Culture</a>”在内一系列新媒体项目的运营者。
+        </p>
+        <h2 id="vision-and-mission">我们的愿景与使命</h2>
+        <p>凌昉事业致力于实现下列各项愿景与使命：</p>
+        <ul>
+            <li class="fold-item">打造以“晽可祛昧，方可明理”为口号的品牌——“晽方文化”，推动新媒体传播与文化修养的有机融合；
+                <ul class="sub-list">
+                    <li>深入践行、精准落实在党的新闻舆论工作座谈会上提出的“努力推出有思想、有温度、有品质的作品”要求；</li>
+                </ul>
+            </li>
+            <li class="fold-item">运营以“求知即修身，明理先方正”为理念的自媒体账号——“晽方Culture”，创作群众喜闻乐见的优质内容；
+                <ul class="sub-list">
+                    <li>认真贯彻落实在中央电视台调研时提出的“多设计一些融思想性、艺术性于一体的好栏目，多创办一些脍炙人口、寓教于乐的好节目”要求；</li>
+                </ul>
+            </li>
+            <li>创建以“晽方文化”为品牌的在线知识平台——“晽方手册”，唤醒读者的求知渴望，驱散蒙昧，引导内心方正，助人通达事理；</li>
+        </ul>
+        <p>凌昉文化始终秉持以下企业思想：</p>
+        <ul>
+            <li>博学博爱 明辨笃行 守正创新 知行合一；</li>
+            <li>点燃受众对未知的好奇与对真理的渴望，在信息洪流中点亮“晽”的光芒，以探索祛昧、以求知明心；</li>
+            <li>坚守内容原创与责任担当，在纷繁资讯中恪守“方”的准则，确保每一篇内容有依据、有分寸、有担当；</li>
+        </ul>
+        <h2 id="projects">我们运营这些项目</h2>
+        <p>凌昉文化运营下列各项协作项目：</p>
+        <ul>
+            <li class="fold-item"><a href="https://space.bilibili.com/476217074">晽方Culture</a>
+               <ul class="sub-list">
+                    <li>凌昉旗下自媒体账号，以剧情演绎、实况与PV为载体，传递“凌昉价值”；</li>
+                </ul></li>
+            <li class="fold-item"><a href="https://wiki.leukeen.com/">晽方手册</a>
+                <ul class="sub-list">
+                    <li>在线知识平台 · 系统化求知，构建通识体系。Wiki：wiki.leukeen.cn；</li>
+                </ul>
+            </li>
+            <li class="fold-item"><a href="https://qm.qq.com/q/nHkZU3GBZ6">晽方研讨处</a>
+                <ul class="sub-list">
+                    <li>兼听则明，偏信则暗，思想碰撞社群、群聊式研讨的交流场域。</li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <div class="footer-copyright">
+            <div class="page-info__text">
+                <p>© 2020-<span class="current-year">至今</span> 晽方社</p>
+                <p>© 2019-<span class="current-year">至今</span> 凌昉事业部</p>
+                <p>© 2019-<span class="current-year">至今</span> **辰***</p>
+            </div>
+            <p>
+                除另有声明的部分外，本网站的文字内容采用 《<a class="lflink lflink-licence" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" title="署名—相同方式共享 4.0 协议国际版" rel="license">署名—相同方式共享 4.0 协议国际版</a>》授权，且可能适用<a class="lflink lflink-tos" href="https://meta.miraheze.org/wiki/Terms_of_Use" title="使用条款" rel="noreferrer noopener" target="_blank">附加条款</a>。参见本网站的<a class="lflink lflink-disclaimer" href="https://wiki.leukeen.com/%E6%99%BD%E6%96%B9%E6%89%8B%E5%86%8C_Wiki:%E7%89%88%E6%9D%83" title="版权声明">版权声明</a>。
+            </p>
+            <p>
+                晽方、凌昉、linefern、leukeen、“三角夹鱼”图标商标、“视域”图标等文字、图形、图文组合，均是本网站运营者——<a href="https://www.leukeen.com/" title="福建凌昉文化媒体事业部" target="_blank" rel="noopener noreferrer">福建凌昉文化媒体事业部</a>或其关联实体的商标。
+            </p>
+        </div>
+        <div class="footer-links">
+            <a class="lflink lflink-about" href="https://wiki.leukeen.com/%E6%99%BD%E6%96%B9%E6%96%87%E5%8C%96" title="关于“晽方”" rel="noreferrer noopener" target="_blank">关于“晽方”</a>
+            <a class="lflink" href="https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy">隐私政策</a>
+            <a class="lflink" href="https://wiki.leukeen.com/%E6%99%BD%E6%96%B9%E6%89%8B%E5%86%8C_Wiki:%E5%85%B3%E4%BA%8E">关于晽方手册</a>
+            <a class="lflink" href="https://wiki.leukeen.com/%E6%99%BD%E6%96%B9%E6%89%8B%E5%86%8C_Wiki:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E">免责声明</a>
+            <a class="lflink" href="https://meta.miraheze.org/wiki/Special:MyLanguage/Terms_of_Use">使用条款</a>
+            <a class="lflink" href="https://qm.qq.com/q/ii4lEmBZNS">晽方粉丝群</a>
+            <a class="lflink" href="https://ifdian.net/a/islfc">给Leukeen捐款</a>
+        </div>
+    </footer>
+    <script>
+        // 版权年份
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElements = document.querySelectorAll('.current-year');
+            const currentYear = new Date().getFullYear();
+            yearElements.forEach(el => {
+                el.textContent = currentYear;
+            });
+        });
+        // 统计代码
+    </script>
+</body>
+</html>
